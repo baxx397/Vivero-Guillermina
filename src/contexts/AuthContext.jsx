@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = (email, password) => {
     const users = [
-      { email: 'admin@vivero.com', password: '1234', role: 'admin' },
+      { email: 'admin@vivero.com', password: 'Leg123', role: 'admin' },
       { email: 'usuario@vivero.com', password: '1234', role: 'Gaston' },
     ];
 

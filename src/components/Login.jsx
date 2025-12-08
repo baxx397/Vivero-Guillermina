@@ -105,11 +105,12 @@ export default function Login() {
           textAlign: 'left'
         }}
       >
-        <p style={{ fontSize: '14px', marginBottom: '5px' }}>
+       <p style={{ fontSize: '14px', marginBottom: '5px' }}>
           <strong>👑 Usuario administrador:</strong><br />
           Email: <code>admin@vivero.com</code><br />
-          Contraseña: <code>1234</code>
+          Contraseña: <code></code>
         </p>
+        <hr style={{ margin: '10px 0' }} />
         <hr style={{ margin: '10px 0' }} />
         <p style={{ fontSize: '14px' }}>
           <strong>👤 Usuario de prueba:</strong><br />
