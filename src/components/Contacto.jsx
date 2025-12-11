@@ -1,4 +1,20 @@
+import Swal from "sweetalert2";
+
 export default function Contacto() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    Swal.fire({
+      icon: "success",
+      title: "¡Mensaje enviado!",
+      text: "Gracias por contactarnos. Te responderemos a la brevedad.",
+      confirmButtonColor: "#3085d6",
+      confirmButtonText: "Aceptar",
+    });
+
+    e.target.reset(); // opcional: limpia el form
+  };
+
   return (
     <div className="contacto-container">
       <h1>Contáctanos</h1>
@@ -13,7 +29,7 @@ export default function Contacto() {
       <section className="contacto-section">
         <h2>Envíanos un mensaje</h2>
 
-        <form className="contacto-form">
+        <form className="contacto-form" onSubmit={handleSubmit}>
           <label>Nombre</label>
           <input type="text" placeholder="Tu nombre" />
 
