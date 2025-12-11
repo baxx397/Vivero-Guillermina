@@ -790,23 +790,25 @@ body {
     font-size: 1.6rem;
   }
 }
-/* ======== PRODUCTOS EN CELULAR (2 POR FILA) ======== */
-@media (max-width: 768px) {
+/* ======== PRODUCTOS EN CELULAR (2 POR FILA – VERTICAL) ======== */
+@media (max-width: 480px) {
   .product-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    gap: 12px;
     padding: 10px;
+    justify-items: center; /* centra cada card */
   }
 
   .product-card {
     width: 100%;
+    max-width: 170px; /* controla que no sean demasiado grandes */
     padding: 10px;
   }
 
   .product-card img {
     width: 100%;
-    height: 150px;
+    height: 150px; /* tamaño ideal en mobile */
     object-fit: cover;
     border-radius: 8px;
   }
