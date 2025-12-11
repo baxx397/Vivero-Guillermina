@@ -13,7 +13,7 @@
   position: relative;
   border-radius: 15px;
   margin-bottom: 30px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(216, 95, 95, 0.479);
 }
 
 .overlay {
@@ -616,4 +616,177 @@
 
 .contacto-form button:hover {
   background: #256625;
+}
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* TÍTULO PRINCIPAL - LORA */
+.home-title {
+  font-family: "Lora", serif !important;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 2.2rem;
+  color: #2f3e1a; /* Verde suave */
+}
+
+/* RESPONSIVE PARA CELULAR */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 1.9rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 10px;
+  }
+}
+
+/* PRODUCTOS (si necesitás responsive sin tocar tu ProductList) */
+.product-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+  .product-card {
+    width: 90%;
+    margin: 0.7rem auto;
+  }
+
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* NAVBAR RESPONSIVE (sin cambiar tu JSX) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #2f3e1a;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* Fuente aplicada al título */
+.titulo-home {
+  font-family: 'Lora', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 30px 10px;
+  color: #2d4739;
+}
+
+/* ==============================
+   HOME - Banner y overlay
+============================== */
+
+.home-container {
+  width: 100%;
+}
+
+.home-banner {
+  width: 100%;
+  height: 350px;
+  background-image: url('https://wallpapers.com/images/hd/high-resolution-pictures-puccpyyw2lg8zvek.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* oscurece la imagen para que se lea mejor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.overlay h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.8rem;
+  color: rgb(245, 35, 234);
+  text-align: center;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+  padding: 80px 20px 20px;;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .home-banner {
+    height: 260px;
+  }
+
+  .overlay h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-banner {
+    height: 220px;
+  }
+
+  .overlay h1 {
+    font-size: 1.6rem;
+  }
 }

@@ -20,13 +20,13 @@ export default function App() {
       <div className="home-container">
         <div className="home-banner">
           <div className="overlay">
-            <h1>Bienvenido a Vivero Guillermina</h1>
+            <h1 className="titulo-home">Bienvenido a Vivero Guillermina</h1>
           </div>
         </div>
       </div>
     )
   }
-
+  
   return (
     <AuthProvider>
       <CartProvider>
