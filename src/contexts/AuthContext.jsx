@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
   const login = (email, password) => {
     const users = [
       { email: 'admin@vivero.com', password: 'Leg123', role: 'admin' },
-      { email: 'usuario@vivero.com', password: '1234', role: 'Gaston' },
+      { email: 'usuario@vivero.com', password: '1234', role: 'Usuario' },
     ];
 
     const userFound = users.find(u => u.email === email);
