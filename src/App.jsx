@@ -15,24 +15,37 @@ import QuienesSomos from "./components/QuienesSomos"; //qioenes somos
 import './App.css'
 
 export default function App() {
-
   function Home() {
     return (
       <div className="home-container">
+  
+        {/* 🟢 HERO optimizado para LCP */}
         <div className="home-banner">
           <div className="overlay">
-            <h1 className="titulo-home">Bienvenido a Vivero Guillermina</h1>
+  
+            {/* 🚀 H1 sin animaciones pesadas ni delay */}
+            <h1 
+              className="titulo-home"
+              style={{ 
+                fontFamily: "'Lora', serif",
+                fontWeight: 700,
+                fontSize: "2.6rem",
+                textShadow: "0 2px 4px rgba(0,0,0,0.25)"
+              }}
+            >
+              Bienvenido a Vivero Guillermina
+            </h1>
+  
           </div>
         </div>
   
-        {/* 🔽 SECCIÓN QUIÉNES SOMOS */}
+        {/* 🔽 SECCIÓN QUIÉNES SOMOS (no afecta el LCP) */}
         <QuienesSomos />
-  
       </div>
-    )
+    );
   }
-   
-  return (
+     
+    return (
     <AuthProvider>
       <CartProvider>
         <Layout>
