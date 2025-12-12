@@ -31,10 +31,15 @@
   padding: 20px;
 }
 
+/* --- HERO TITLE --- */
 .overlay h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-family: 'Lora', serif;
+  font-size: 2.8rem;
+  color: rgb(245, 35, 234);
+  text-align: center;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+  padding: 80px 20px 20px;
 }
 
 .overlay p {
@@ -770,7 +775,7 @@ body {
   padding: 80px 20px 20px;;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .home-banner {
     height: 260px;
@@ -790,6 +795,7 @@ body {
     font-size: 1.6rem;
   }
 }
+
 /* ======== PRODUCTOS EN CELULAR (2 POR FILA) ======== */
 @media (max-width: 768px) {
   .product-list {
