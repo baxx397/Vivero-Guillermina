@@ -1,0 +1,46 @@
+.qs-container {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    background: #f3f7f1; /* tono verde suave */
+  }
+  
+  .qs-card {
+    width: 100%;
+    max-width: 850px;
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border: 2px solid #dfe9d5;
+    text-align: center;
+  }
+  
+  .qs-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+  
+  .qs-header h2 {
+    font-family: "Lora", serif;
+    font-size: 36px;
+    color: #2e4b32;
+  }
+  
+  .qs-leaf {
+    font-size: 24px;
+    color: #5e8c61;
+  }
+  
+  .qs-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #3b3b3b;
+    text-align: center;
+  }
+  

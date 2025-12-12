@@ -11,6 +11,7 @@ import Login from './components/Login'
 import ProtectedRoute from './components/ProtectedRoute'
 import Checkout from './components/Checkout'
 import Contacto from "./components/Contacto";// ← 🟢 IMPORTAR CONTACTO
+import QuienesSomos from "./components/QuienesSomos"; //qioenes somos
 import './App.css'
 
 export default function App() {
@@ -23,10 +24,14 @@ export default function App() {
             <h1 className="titulo-home">Bienvenido a Vivero Guillermina</h1>
           </div>
         </div>
+  
+        {/* 🔽 SECCIÓN QUIÉNES SOMOS */}
+        <QuienesSomos />
+  
       </div>
     )
   }
-  
+   
   return (
     <AuthProvider>
       <CartProvider>
@@ -40,6 +45,7 @@ export default function App() {
 
             {/* 🟢 Contacto — Público */}
             <Route path="/contacto" element={<Contacto />} />   {/* ← 🟢 NUEVA RUTA */}
+            <Route path="/quienes-somos" element={<QuienesSomos />} />
 
             {/* 🛒 Carrito — público */}
             <Route path="/carrito" element={<Cart />} />
