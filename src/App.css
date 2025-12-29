@@ -125,17 +125,20 @@ body {
 }
 
 .card-actions .btn {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #4b0345;
-  color: white;                                      
-  transition: background 0.2s;
+  background: linear-gradient(135deg, #ba09ca, #d656cc);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .card-actions .btn:hover {
-  background-color: #ba09ca;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #3d023a, #d13cc5);
 }
 
 /* ==============================
@@ -801,4 +804,45 @@ body {
     object-fit: cover;
     border-radius: 8px;
   }
+}
+.badge {
+  position: absolute;
+ 
+ 
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* 🔥 OFERTA */
+.badge-oferta {
+  background: linear-gradient(135deg, #e84393, #d63031);
+}
+
+/* 🌱 NUEVO */
+.badge-nuevo {
+  background: linear-gradient(135deg, #00b894, #0984e3);
+}
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+}
+
+.badge.oferta {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.badge.nuevo {
+  background: linear-gradient(135deg, #83077d, #e7185d);
 }

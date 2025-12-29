@@ -217,8 +217,21 @@ export default function ProductList() {
       <div className="product-list">
         {currentProducts.length > 0 ? (
           currentProducts.map(p => (
-            <div key={p.id} className="product-card">
-              
+<div
+  key={p.id}
+  className="product-card"
+  style={{ position: "relative" }}
+>
+
+  {/* OFERTA */}
+  {Number(p.price) < 8000 && (
+    <span className="badge oferta">🔥 Oferta</span>
+  )}
+
+  {/* NUEVO */}
+  {Number(p.id) > products.length - 3 && (
+    <span className="badge nuevo">🆕 Nuevo</span>
+  )}
               {/* IMAGEN CON ZOOM + MANITO */}
               <img
                 src={p.image}
