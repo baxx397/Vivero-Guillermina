@@ -221,7 +221,7 @@ export default function Admin() {
               borderRadius: "6px",
               border: "none",
               cursor: "pointer",
-              background: selectedCategory === cat ? "#27ae60" : "#bdc3c7",
+              background: selectedCategory === cat ? "#ba09ca" : "#d656cc",
               color: "white",
               fontWeight: "bold"
             }}

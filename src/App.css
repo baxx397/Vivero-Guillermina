@@ -1,4 +1,28 @@
 /* ==============================
+   RESET + FONDO GENERAL
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #e788df; /* 🌸 ROSA OSCURO */
+}
+
+/* BODY ÚNICO (no debe haber otro) */
+body {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ==============================
    HOME - Banner y overlay
 ============================== */
 .home-container {
@@ -6,7 +30,7 @@
 }
 
 .home-banner {
-  background-image: url('https://wallpapers.com/images/hd/high-resolution-pictures-puccpyyw2lg8zvek.jpg');
+  background-image: url('https://img.freepik.com/fotos-premium/flores-primavera-al-aire-libre-petalos-naturaleza_53876-507668.jpg?semt=ais_hybrid&w=740&q=80');
   background-size: cover;
   background-position: center;
   height: 450px;
@@ -73,7 +97,7 @@
 .product-card {
   width: 260px;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #860d58;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -92,7 +116,7 @@
   border-radius: 8px;
 }
 
-/* Botones dentro de la tarjeta */
+/* Botones dentro de la tarjeta y letra de la tarjeta*/
 .card-actions {
   display: flex;
   flex-direction: column;
@@ -105,13 +129,13 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #208124;
-  color: white;
+  background-color: #4b0345;
+  color: white;                                      
   transition: background 0.2s;
 }
 
 .card-actions .btn:hover {
-  background-color: #165719;
+  background-color: #ba09ca;
 }
 
 /* ==============================
@@ -151,7 +175,7 @@
 /* Botón agregar al carrito */
 .add-cart {
   padding: 8px 16px;
-  background-color:#21a025;
+  background-color:#d656cc;
   color: white;
   border: none;
   border-radius: 5px;
@@ -159,7 +183,7 @@
 }
 
 .add-cart:hover {
-  background-color: #0d3a0f;
+  background-color: #ba09ca;
 }
 
 /* Botón volver a lista */
@@ -167,7 +191,7 @@
   text-decoration: none;
   margin-bottom: 10px;
   padding: 6px 12px;
-  background-color: #195f16;
+  background-color: #d656cc;
   color: white;
   border-radius: 5px;
 }
@@ -209,7 +233,7 @@
   gap: 15px;
   margin-bottom: 15px;
   padding: 15px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #d656cc;
 }
 
 /* Imagen dentro del carrito */
@@ -238,7 +262,7 @@
 .cart-btn {
   padding: 4px 10px;
   margin: 0 5px;
-  background-color: #3d9640;
+  background-color: #3f033a;
   color: white;
   border: none;
   border-radius: 4px;
@@ -251,7 +275,7 @@
 }
 
 .cart-btn:hover {
-  background-color: #07470a;
+  background-color: #a640af;
 }
 
 /* Responsive carrito */
@@ -300,8 +324,8 @@
   background-color: #2e4373;
 }
 .nav-links li .active-link {
-  box-shadow: inset 0 -2px 0 0 #57770c; /* línea inferior verde */
-  color: #57770c; /* cambia el color del texto si querés */
+  box-shadow: inset 0 -2px 0 0 #ba09ca; /* línea inferior verde */
+  color: #2c3614; /* cambia el color del texto si querés */
 }
 
 .nav-links li a {
@@ -320,15 +344,15 @@
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #ffffff;
+  background: #d656cc;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  border: 2px solid #20812430; /* leve borde verde translúcido */
+  border: 2px solid #c0c409e5; /* leve borde verde translúcido */
 }
 
 .admin-container h2 {
   text-align: center;
-  color: #208124; /* verde principal del vivero */
+  color: #ba09ca; /* verde principal del vivero */
   margin-bottom: 1.5rem;
   font-family: 'Montserrat', sans-serif;
 }
@@ -352,7 +376,7 @@
 }
 
 .admin-form button {
-  background: #208124;
+  background: #ba09ca;
   color: white;
   border: none;
   border-radius: 8px;
@@ -364,7 +388,7 @@
 }
 
 .admin-form button:hover {
-  background: #165719;
+  background: #ba09ca;
   transform: translateY(-2px);
 }
 
@@ -381,7 +405,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
-  border: 1px solid #20812430;
+  border: 1px solid #ba09ca;
   transition: transform 0.2s ease;
 }
 
@@ -398,7 +422,7 @@
 }
 
 .admin-card h3 {
-  color: #208124;
+  color: #ba09ca;
   margin-bottom: 0.3rem;
   font-size: 1.1rem;
 }
@@ -446,7 +470,7 @@
 }
 
 .btn.admin-btn {
-  background-color: #2e7d32;
+  background-color: #ba09ca;
   color: white;
   border: none;
 }
@@ -499,7 +523,7 @@
 
 @keyframes highlight {
   0% {
-    box-shadow: 0 0 0px 3px rgba(0, 255, 0, 0.8);
+    box-shadow: 0 0 0px 3px #ba09ca(0, 255, 0, 0.8);
   }
   100% {
     box-shadow: 0 0 0px 0 rgba(0, 255, 0, 0);
@@ -529,16 +553,16 @@
   margin: 0 5px;
   padding: 8px 14px;
   border-radius: 8px;
-  border: 1px solid #208124;
+  border: 1px solid #ba09ca;
   background-color: white;
-  color: #208124;
+  color: #ba09ca;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background-color: #208124;
+  background-color: #ba09ca;
   color: white;
 }
 
@@ -549,7 +573,7 @@
 }
 
 .pagination-btn.active {
-  background-color: #208124;
+  background-color: #d656cc;
   color: white;
 }
 .pagination {
@@ -573,7 +597,7 @@
 }
 
 .active-page {
-  background: #4caf50 !important;
+  background: #d656cc !important;
   color: white;
   font-weight: bold;
 }
@@ -610,7 +634,7 @@
 
 .contacto-form button {
   padding: 12px;
-  background: #2d7a2d;
+  background: #d656cc;
   color: white;
   border: none;
   border-radius: 5px;
@@ -620,7 +644,7 @@
 }
 
 .contacto-form button:hover {
-  background: #256625;
+  background: #d656cc;
 }
 /* Reset general */
 * {
@@ -652,7 +676,7 @@ body {
   text-align: center;
   margin-top: 1.5rem;
   margin-bottom: 2.2rem;
-  color: #2f3e1a; /* Verde suave */
+  color: #d656cc; /* Verde suave */
 }
 
 /* RESPONSIVE PARA CELULAR */
@@ -667,7 +691,7 @@ body {
 
 /* PRODUCTOS (si necesitás responsive sin tocar tu ProductList) */
 .product-card {
-  background: white;
+  background: #d656cc;
   border-radius: 8px;
   padding: 1rem;
   margin: 1rem;
@@ -700,7 +724,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: #2f3e1a;
+  background: #ba09ca;
   color: white;
 }
 
@@ -729,51 +753,12 @@ body {
   text-align: center;
   margin: 0;
   padding: 30px 10px;
-  color: #2d4739;
+  color: #d656cc;
 }
 
 /* ==============================
    HOME - Banner y overlay
 ============================== */
-
-.home-container {
-  width: 100%;
-}
-
-.home-banner {
-  width: 100%;
-  height: 350px;
-  background-image: url('https://wallpapers.com/images/hd/high-resolution-pictures-puccpyyw2lg8zvek.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45); /* oscurece la imagen para que se lea mejor */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px;
-}
-
-.overlay h1 {
-  font-family: 'Lora', serif;
-  font-size: 2.8rem;
-  color: rgb(245, 35, 234);
-  text-align: center;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
-  line-height: 1.2;
-  padding: 80px 20px 20px;;
-}
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {

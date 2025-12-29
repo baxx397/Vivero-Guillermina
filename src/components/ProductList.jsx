@@ -108,15 +108,15 @@ export default function ProductList() {
           border-radius: 20px;
           border: none;
           cursor: pointer;
-          background: #ecf0f1;
-          color: #2c3e50;
+          background: #03708bff;
+          color: #ba09ca;
           font-weight: 600;
           box-shadow: 0 1px 3px rgba(0,0,0,0.08);
           transition: transform .08s, background .12s;
         }
         .pagination-btn:hover:not(:disabled) {
           transform: translateY(-2px);
-          background: #dfe6e9;
+          background: #ba09ca;
         }
         .pagination-btn:disabled {
           opacity: 0.5;
@@ -124,7 +124,7 @@ export default function ProductList() {
           transform: none;
         }
         .pagination-btn.active {
-          background: #27ae60;
+          background: #ba09ca;
           color: white;
         }
 
@@ -138,7 +138,7 @@ export default function ProductList() {
         .product-card {
           padding: 12px;
           border-radius: 10px;
-          background: #fff;
+          background: #d656cc;
           box-shadow: 0 1px 6px rgba(0,0,0,0.04);
           text-align: center;
         }
@@ -164,7 +164,7 @@ export default function ProductList() {
           border-radius: 8px;
           border: none;
           cursor: pointer;
-          background: #27ae60;
+          background: #d656cc;
           color: white;
           font-weight: 600;
         }
@@ -186,7 +186,7 @@ export default function ProductList() {
             width: '300px',
             maxWidth: '90%',
             borderRadius: '8px',
-            border: '1px solid #ccc'
+            border: '1px solid #65a019ff'
           }}
         />
       </div>
@@ -203,7 +203,7 @@ export default function ProductList() {
               borderRadius: "6px",
               border: "none",
               cursor: "pointer",
-              background: selectedCategory === cat ? "#27ae60" : "#bdc3c7",
+              background: selectedCategory === cat ? "#ba09ca" : "#ca66c2ff",
               color: "white",
               fontWeight: "bold"
             }}

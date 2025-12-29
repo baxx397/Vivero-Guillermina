@@ -26,7 +26,7 @@ const BackLink = styled(Link)`
   text-decoration: none;
   margin-bottom: 10px;
   padding: 6px 12px;
-  background-color: #195f16;
+  background-color: #ba09ca;
   color: white;
   border-radius: 5px;
 
@@ -65,7 +65,7 @@ const Info = styled.div`
 
 const AddButton = styled.button`
   padding: 8px 16px;
-  background-color: #21a025;
+  background-color: #d656cc;
   color: white;
   border: none;
   border-radius: 5px;
@@ -75,7 +75,7 @@ const AddButton = styled.button`
   transition: background 0.2s;
 
   &:hover {
-    background-color: #0d3a0f;
+    background-color: #ba09ca;
   }
 `;
 

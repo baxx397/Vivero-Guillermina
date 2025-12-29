@@ -55,7 +55,7 @@ export default function Login() {
           style={{
             padding: '10px',
             borderRadius: '6px',
-            border: '1px solid #ccc',
+            border: '1px solid #ba09ca',
             fontSize: '16px',
           }}
         />
@@ -81,14 +81,14 @@ export default function Login() {
         <button
           type="submit"
           style={{
-            backgroundColor: '#4CAF50',
+            backgroundColor: '#ba09ca',
             color: 'white',
             border: 'none',
             padding: '12px',
             borderRadius: '8px',
             fontSize: '16px',
             cursor: 'pointer',
-            boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+            boxShadow: '0 4px 8px #03708bff(0,0,0,0.2)',
           }}
         >
           Iniciar sesión
@@ -98,10 +98,10 @@ export default function Login() {
       <div
         style={{
           marginTop: '30px',
-          backgroundColor: '#f9f9f9',
+          backgroundColor: '#dd39e2ff',
           padding: '15px',
           borderRadius: '8px',
-          border: '1px solid #eee',
+          border: '1px solid #03708bff',
           textAlign: 'left'
         }}
       >
