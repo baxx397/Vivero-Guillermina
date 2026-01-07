@@ -42,7 +42,8 @@ export default function Navbar() {
         </li>
         <li>
           <NavLink to="/quienes-somos" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            ¿Quinés somos?
+            ¿Quinés 
+            somos?
           </NavLink>
         </li>
 
