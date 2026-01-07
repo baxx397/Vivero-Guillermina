@@ -23,65 +23,6 @@ body {
 }
 
 /* ==============================
-   HOME - Banner y overlay
-============================== */
-.home-container {
-  width: 100%;
-}
-
-.home-banner {
-  background-image: url('https://img.freepik.com/fotos-premium/flores-primavera-al-aire-libre-petalos-naturaleza_53876-507668.jpg?semt=ais_hybrid&w=740&q=80');
-  background-size: cover;
-  background-position: center;
-  height: 450px;
-  position: relative;
-  border-radius: 15px;
-  margin-bottom: 30px;
-  box-shadow: 0 6px 18px rgba(216, 95, 95, 0.479);
-}
-
-.overlay {
-  position: absolute;
-  top: 1px; /* sube el texto 5px desde arriba */
-  left: 0;
-  width: 100%;
-  height: auto; /* se ajusta al contenido */
-  background: rgba(134, 5, 117, 0.274);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: rgba(224, 7, 206, 0.842);
-  text-align: center;
-  padding: 20px;
-}
-
-/* --- HERO TITLE --- */
-.overlay h1 {
-  font-family: 'Lora', serif;
-  font-size: 2.8rem;
-  color: rgb(245, 35, 234);
-  text-align: center;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
-  line-height: 1.2;
-  padding: 80px 20px 20px;
-}
-
-.overlay p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.25rem;
-}
-
-/* Responsive HOME */
-@media (max-width: 768px) {
-  .overlay h1 {
-    font-size: 2rem;
-  }
-  .overlay p {
-    font-size: 1rem;
-  }
-}
-
-/* ==============================
    PRODUCT LIST
 ============================== */
 /* Contenedor de tarjetas de productos */

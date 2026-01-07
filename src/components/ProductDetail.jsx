@@ -152,7 +152,6 @@ export default function ProductDetail() {
           {product.luz && <p><strong>Luz:</strong> {product.luz}</p>}
           {product.riego && <p><strong>Riego:</strong> {product.riego}</p>}
           {product.cuidados && <p><strong>Cuidados:</strong> {product.cuidados}</p>}
-          {product.tamaño && <p><strong>Tamaño:</strong> {product.tamaño}</p>}
           <AddButton onClick={handleAddToCart}>Agregar al carrito</AddButton>
         </Info>
       </Container>

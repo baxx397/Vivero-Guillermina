@@ -1,0 +1,113 @@
+/* ==============================
+   HOME - Banner y overlay
+============================== */
+.home-container {
+    width: 100%;
+  }
+  
+  /* Banner principal */
+  .home-banner {
+    background-image: url('https://img.freepik.com/fotos-premium/flores-primavera-al-aire-libre-petalos-naturaleza_53876-507668.jpg?semt=ais_hybrid&w=740&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(216, 95, 95, 0.479);
+    overflow: hidden; /* 🔑 evita que el overlay rompa el banner */
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(134, 5, 117, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Título principal */
+  .overlay h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.8rem;
+    color: rgb(245, 35, 234);
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+  }
+  
+  /* Texto */
+  .overlay p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+  }
+  
+  /* ==============================
+     SOBRE NOSOTROS
+  ============================== */
+  .home-about {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .home-about h2 {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #7b2c6f;
+  }
+  
+  .home-about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* ==============================
+     CTA INSTAGRAM
+  ============================== */
+  .home-cta {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .home-cta h2 {
+    margin-bottom: 20px;
+    font-family: 'Lora', serif;
+    color: #7b2c6f;
+  }
+  
+  .cta-button {
+    background: linear-gradient(135deg, #c43b9b, #7b2c6f);
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: linear-gradient(135deg, #7b2c6f, #c43b9b);
+    transform: scale(1.05);
+  }
+  
+  /* ==============================
+     Responsive
+  ============================== */
+  @media (max-width: 768px) {
+    .overlay h1 {
+      font-size: 2rem;
+    }
+  
+    .overlay p {
+      font-size: 1rem;
+    }
+  }
+  
