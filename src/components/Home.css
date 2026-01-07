@@ -4,7 +4,43 @@
 .home-container {
     width: 100%;
   }
-  
+  /* NAVBAR RESPONSIVE (sin cambiar tu JSX) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #ba09ca;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* Fuente aplicada al título */
+.titulo-home {
+  font-family: 'Lora', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 30px 10px;
+  color: #d656cc;
+}
   /* Banner principal */
   .home-banner {
     background-image: url('https://img.freepik.com/fotos-premium/flores-primavera-al-aire-libre-petalos-naturaleza_53876-507668.jpg?semt=ais_hybrid&w=740&q=80');
@@ -110,4 +146,27 @@
       font-size: 1rem;
     }
   }
-  
+  /* ==============================
+   HOME - Banner y overlay
+============================== */
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .home-banner {
+    height: 260px;
+  }
+
+  .overlay h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-banner {
+    height: 220px;
+  }
+
+  .overlay h1 {
+    font-size: 1.6rem;
+  }
+}
