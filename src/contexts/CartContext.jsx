@@ -6,10 +6,12 @@ export const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  // Cargar carrito desde localStorage al iniciar
+  // Cargar carrito al iniciar
   useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cart"));
-    if (savedCart) setCart(savedCart);
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+      setCart(JSON.parse(savedCart));
+    }
   }, []);
 
   // Guardar carrito cuando cambia
@@ -17,22 +19,19 @@ export function CartProvider({ children }) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  // Agregar producto
   const addToCart = (product) => {
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id);
-      if (existing) {
-        return prev.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      }
-      return [...prev, { ...product, quantity: 1 }];
+      return existing
+        ? prev.map((item) =>
+            item.id === product.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          )
+        : [...prev, { ...product, quantity: 1 }];
     });
   };
 
-  // Aumentar cantidad
   const increase = (id) => {
     setCart((prev) =>
       prev.map((item) =>
@@ -43,7 +42,6 @@ export function CartProvider({ children }) {
     );
   };
 
-  // Disminuir cantidad
   const decrease = (id) => {
     setCart((prev) =>
       prev
@@ -56,21 +54,18 @@ export function CartProvider({ children }) {
     );
   };
 
-  // Eliminar completamente un item
   const removeItem = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
-  // Vaciar carrito
   const clearCart = () => {
     setCart([]);
+    localStorage.removeItem("cart");
   };
 
-  // Total del carrito
-  const total = cart.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
+  const total = cart
+    .reduce((acc, item) => acc + item.price * item.quantity, 0)
+    .toFixed(2);
 
   return (
     <CartContext.Provider
