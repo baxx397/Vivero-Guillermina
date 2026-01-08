@@ -17,6 +17,7 @@
   color: white;
   width: 100%;
   box-sizing: border-box;
+  overflow-x: auto; /* permite scroll horizontal si no caben todos los links */
 }
 
 .nav-links {
@@ -25,6 +26,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: nowrap; /* evita que los links se apilen */
 }
 
 .nav-links li a,
@@ -32,43 +34,20 @@
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  white-space: nowrap;
+  white-space: nowrap; /* evita que se quiebre el texto */
   background: none;
   border: none;
   cursor: pointer;
   font: inherit;
 }
 
-/* ==============================
- NAVBAR RESPONSIVE (Solo móvil)
-============================== */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 10px; /* reduce padding lateral */
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    gap: 0.3rem;
-    padding: 0;
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links li a,
-  .nav-links li button.link-button {
-    display: block;
-    width: 100%;
-    padding: 0.6rem 0;
-    white-space: normal; /* permite que el texto largo se quiebre */
-  }
+/* Ocultar scroll bar feo en móvil */
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+.navbar {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;     /* Firefox */
 }
 
 /* ==============================
