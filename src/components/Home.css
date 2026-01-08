@@ -19,45 +19,56 @@
   box-sizing: border-box;
 }
 
-.navbar-links {
+.nav-links {
   display: flex;
   gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar a {
+.nav-links li a,
+.nav-links li button.link-button {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
   white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
 }
 
 /* ==============================
- NAVBAR RESPONSIVE DEFINITIVO
+ NAVBAR RESPONSIVE (Solo móvil)
 ============================== */
 @media (max-width: 768px) {
-.navbar {
-  flex-direction: column;
-  align-items: center;      /* centra todo */
-  padding: 0;               /* quita padding lateral que rompe */
-  width: 100%;              /* ocupa todo el ancho */
-  box-sizing: border-box;   /* incluye padding en el ancho */
-}
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 10px; /* reduce padding lateral */
+  }
 
-.navbar-links {
-  flex-direction: column;
-  width: 100%;              /* ocupa todo el ancho del navbar */
-  max-width: 100%;          /* asegura que no se salga */
-  gap: 0.3rem;
-  padding: 0;               /* elimina padding extra */
-}
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 0.3rem;
+    padding: 0;
+  }
 
-.navbar-links a {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 0.5rem 0;        /* cómodo en móvil */
-  white-space: normal;      /* permite que el texto se quiebre */
-}
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a,
+  .nav-links li button.link-button {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0;
+    white-space: normal; /* permite que el texto largo se quiebre */
+  }
 }
 
 /* ==============================
