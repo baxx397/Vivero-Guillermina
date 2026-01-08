@@ -1,4 +1,5 @@
 import "./Home.css";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -19,6 +20,15 @@ export default function Home() {
           Somos un vivero dedicado a acercarte plantas, flores y productos
           naturales para embellecer tus espacios y conectarte con la naturaleza.
         </p>
+      </section>
+
+      {/* QUIÉNES SOMOS */}
+      <section className="home-quienes-somos">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos el Vivero Guillermina, dedicados a ofrecerte plantas, flores y productos naturales de calidad.</p>
+        <NavLink to="/quienes-somos" className="cta-button">
+          Ver más
+        </NavLink>
       </section>
 
       {/* CTA / INSTAGRAM */}

@@ -40,13 +40,7 @@ export default function Navbar() {
             Contacto
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/quienes-somos" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            ¿Quinés 
-            somos?
-          </NavLink>
-        </li>
-
+       
         {isAuthenticated && (
           <li>
             <NavLink to="/carrito" className={({ isActive }) => (isActive ? 'active-link' : '')}>
