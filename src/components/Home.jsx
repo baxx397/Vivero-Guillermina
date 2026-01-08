@@ -13,14 +13,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SOBRE NOSOTROS */}
-      <section className="home-about">
-        <h2>Sobre Vivero Guillermina</h2>
-        <p>
-          Somos un vivero dedicado a acercarte plantas, flores y productos
-          naturales para embellecer tus espacios y conectarte con la naturaleza.
-        </p>
-      </section>
+ 
 
       {/* QUIÉNES SOMOS */}
       <section className="home-quienes-somos">
