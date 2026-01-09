@@ -6,7 +6,8 @@ export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="home-container">
+    <main className="home-container">
+
 
       {/* HERO */}
       <section className="home-banner">
@@ -19,11 +20,11 @@ export default function Home() {
       {/* DESTACADOS */}
       <section className="home-destacados">
         <div className="destacado-card">
-          <h3>🌿 Plantas de interior</h3>
+          <h2>🌿 Plantas de interior</h2>
           <p>Ideales para darle vida a tus ambientes.</p>
         </div>
         <div className="destacado-card">
-          <h3>🌸 Plantas de exterior</h3>
+          <h2>🌸 Plantas de exterior</h2>
           <p>Perfectas para jardines, patios y balcones.</p>
         </div>
       </section>
@@ -31,6 +32,7 @@ export default function Home() {
       {/* CTA PRODUCTOS */}
       <section className="hero">
         <button
+          type="button"
           className="btn-primary"
           onClick={() => navigate("/productos")}
         >
@@ -59,10 +61,11 @@ export default function Home() {
           rel="noopener noreferrer"
           className="cta-button"
         >
-          Ver Instagram 🌸
+         Seguinos en Instagram 🌸
+
         </a>
       </section>
 
-    </div>
+    </main>
   );
 }
