@@ -21,22 +21,17 @@
  Banner principal
 ============================== */
 .home-banner {
-  background-image: url('https://img.freepik.com/fotos-premium/flores-primavera-al-aire-libre-petalos-naturaleza_53876-507668.jpg?semt=ais_hybrid&w=740&q=80');
+  background-image: url('/banner-home.webp');
   background-size: cover;
   background-position: center;
   height: 450px;
+  width: 100%;
   position: relative;
   border-radius: 15px;
   margin-bottom: 30px;
-  box-shadow: 0 6px 18px rgba(216, 95, 95, 0.479);
-  overflow: hidden; /* 🔑 evita que el overlay rompa el banner */
-  .home-banner {
-    position: relative;
-    z-index: 1; /* 👈 queda detrás del navbar */
-  }
-  
+  overflow: hidden;
+  z-index: 1;
 }
-
 /* Overlay colores del segundo titulo del home*/
 .overlay {
   position: absolute;
