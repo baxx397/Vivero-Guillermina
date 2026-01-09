@@ -1,5 +1,5 @@
 /* ==============================
- NAVBAR
+   NAVBAR GENERAL
 ============================== */
 .navbar {
     display: flex;
@@ -10,16 +10,25 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.15);
     width: 100%;
     box-sizing: border-box;
+  
+    position: sticky; /* queda fijo arriba */
+    top: 0;
+    z-index: 1000; /* siempre por encima del home */
   }
-/* Marca / logo */
-.navbar .brand a {
+  
+  /* ==============================
+     MARCA / LOGO
+  ============================== */
+  .navbar .brand a {
     font-weight: bold;
     font-size: 1.5rem;
     color: #660d5f;
     text-decoration: none;
   }
   
-  /* Links */
+  /* ==============================
+     LINKS DE NAVEGACIÓN (DESKTOP)
+  ============================== */
   .nav-links {
     display: flex;
     gap: 16px;
@@ -41,7 +50,7 @@
     opacity: 0.8;
   }
   
-  /* Botón link (logout, etc) */
+  /* Botón tipo link (logout, etc) */
   .link-button {
     background: none;
     border: none;
@@ -54,10 +63,11 @@
   .link-button:hover {
     opacity: 0.8;
   }
-/* ==============================
-   MENU HAMBURGUESA (SOLO MÓVIL)
-   Se muestra únicamente en pantallas chicas
-============================== */
+  
+  /* ==============================
+     BOTÓN HAMBURGUESA
+     (SOLO MÓVIL)
+  ============================== */
   .menu-toggle {
     display: none;
     font-size: 1.8rem;
@@ -66,26 +76,31 @@
     color: white;
     cursor: pointer;
   }
+  
   /* ==============================
-   NAVBAR RESPONSIVE - MÓVIL
-   Menú hamburguesa y navegación desplegable
-============================== */
+     NAVBAR RESPONSIVE - MÓVIL
+  ============================== */
   @media (max-width: 768px) {
+  
+    /* Mostrar hamburguesa */
     .menu-toggle {
       display: block;
     }
   
+    /* Menú desplegable */
     .nav-links {
       position: absolute;
       top: 64px;
       right: 0;
+      width: 100%;
       background: #ee14dc;
       flex-direction: column;
-      width: 100%;
       display: none;
       padding: 20px 0;
+      z-index: 999; /* encima del banner */
     }
   
+    /* Menú abierto */
     .nav-links.open {
       display: flex;
     }
@@ -95,6 +110,4 @@
       padding: 10px 0;
     }
   }
-  .navbar {
-  position: relative;
-}
+  
