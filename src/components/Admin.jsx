@@ -15,7 +15,7 @@ export default function Admin() {
     luz: "",
     riego: "",
     cuidados: "",
-    tamaño: ""
+ 
   });
   const [error, setError] = useState("");
   const [isEditing, setIsEditing] = useState(false);
@@ -165,7 +165,7 @@ export default function Admin() {
       luz: "",
       riego: "",
       cuidados: "",
-      tamaño: ""
+     
     });
     setIsEditing(false);
     setError("");
@@ -201,7 +201,7 @@ export default function Admin() {
         <input type="text" name="luz" placeholder="Luz" value={form.luz} onChange={handleChange} />
         <input type="text" name="riego" placeholder="Riego" value={form.riego} onChange={handleChange} />
         <input type="text" name="cuidados" placeholder="Cuidados" value={form.cuidados} onChange={handleChange} />
-        <input type="text" name="tamaño" placeholder="Tamaño" value={form.tamaño} onChange={handleChange} />
+      
 
         {error && <p className="error">{error}</p>}
 

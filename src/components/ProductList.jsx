@@ -225,12 +225,12 @@ export default function ProductList() {
 
   {/* OFERTA */}
   {Number(p.price) < 8000 && (
-    <span className="badge oferta">🔥 Oferta</span>
+    <span className="badge oferta">Oferta</span>
   )}
 
   {/* NUEVO */}
   {Number(p.id) > products.length - 3 && (
-    <span className="badge nuevo">🆕 Nuevo</span>
+    <span className="badge nuevo">Nuevo</span>
   )}
               {/* IMAGEN CON ZOOM + MANITO */}
               <img

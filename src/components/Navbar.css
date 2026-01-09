@@ -1,0 +1,100 @@
+/* ==============================
+ NAVBAR
+============================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: #ee14dc;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    width: 100%;
+    box-sizing: border-box;
+  }
+/* Marca / logo */
+.navbar .brand a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #660d5f;
+    text-decoration: none;
+  }
+  
+  /* Links */
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  /* Links normales */
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.2s ease;
+  }
+  
+  .nav-links a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Botón link (logout, etc) */
+  .link-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  
+  .link-button:hover {
+    opacity: 0.8;
+  }
+/* ==============================
+   MENU HAMBURGUESA (SOLO MÓVIL)
+   Se muestra únicamente en pantallas chicas
+============================== */
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  /* ==============================
+   NAVBAR RESPONSIVE - MÓVIL
+   Menú hamburguesa y navegación desplegable
+============================== */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 64px;
+      right: 0;
+      background: #ee14dc;
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      padding: 20px 0;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+  .navbar {
+  position: relative;
+}

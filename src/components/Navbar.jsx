@@ -1,49 +1,62 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../contexts/AuthContext'
-import { CartContext } from '../contexts/CartContext'   
+import { CartContext } from '../contexts/CartContext'
+import "./Navbar.css";
 
 export default function Navbar() {
   const { isAuthenticated, user, logout } = useContext(AuthContext)
-  const { cart } = useContext(CartContext)           
+  const { cart } = useContext(CartContext)
   const navigate = useNavigate()
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const handleLogout = () => {
     logout()
     navigate('/')
+    setMenuOpen(false)
   }
 
-  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0)  
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0)
 
   return (
     <nav className="navbar">
       <div className="brand">
-        <NavLink to="/">Vivero Guillermina</NavLink>
+        <NavLink to="/" onClick={() => setMenuOpen(false)}>
+          Vivero Guillermina
+        </NavLink>
       </div>
 
-      <ul className="nav-links">
+      {/* Botón hamburguesa */}
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
+
+      {/* Links */}
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li>
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/" onClick={() => setMenuOpen(false)}>
             Inicio
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/productos" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/productos" onClick={() => setMenuOpen(false)}>
             Productos
           </NavLink>
         </li>
 
-        {/* 👇 Contacto agregado antes de Login */}
         <li>
-          <NavLink to="/contacto" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/contacto" onClick={() => setMenuOpen(false)}>
             Contacto
           </NavLink>
         </li>
-       
+
         {isAuthenticated && (
           <li>
-            <NavLink to="/carrito" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            <NavLink to="/carrito" onClick={() => setMenuOpen(false)}>
               Carrito 🛒 {cartCount > 0 && <span>({cartCount})</span>}
             </NavLink>
           </li>
@@ -51,7 +64,7 @@ export default function Navbar() {
 
         {isAuthenticated && user?.role === 'admin' && (
           <li>
-            <NavLink to="/admin" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            <NavLink to="/admin" onClick={() => setMenuOpen(false)}>
               Admin
             </NavLink>
           </li>
@@ -59,14 +72,14 @@ export default function Navbar() {
 
         {!isAuthenticated ? (
           <li>
-            <NavLink to="/login" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+            <NavLink to="/login" onClick={() => setMenuOpen(false)}>
               Login
             </NavLink>
           </li>
         ) : (
           <li>
             <button className="link-button" onClick={handleLogout}>
-              Cerrar sesión ({user?.role})
+              Salir ({user?.role})
             </button>
           </li>
         )}
