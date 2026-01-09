@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vivero-guillermina.vercel.app/sitemap.xml
